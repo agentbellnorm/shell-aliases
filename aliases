@@ -39,7 +39,7 @@ make-gif () {
     ffmpeg -i $1 -vf "fps=10,scale=640:-1:flags=lanczos,split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse" -loop 0 $2
 }
 
-# unalias gcm >/dev/null 2>/dev/null
+unalias gcm >/dev/null 2>/dev/null
 gcm () {
     if git show-ref --verify --quiet refs/heads/master; then
         git checkout master
