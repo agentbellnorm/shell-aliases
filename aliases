@@ -4,6 +4,7 @@ HOMEBREW_NO_AUTO_UPDATE=1
 alias gs='git status'
 alias gl='git log'
 alias uncommit='git reset --soft HEAD~'
+alias unstage='git restore --staged'
 alias subu='git submodule update --init --recursive'
 alias pp='git pull --rebase origin master && git fetch origin && git submodule update --init --recursive'
 alias gc-='git checkout -'
@@ -19,13 +20,14 @@ alias y='yarn'
 alias yt='yarn test'
 alias ys='yarn start'
 alias s='source ~/.zshrc'
-alias vim='neovide'
+alias vim='neovide --frame=none'
 alias rc='vim ~/.zshrc'
 alias aliases='vim ~/kod/shell-aliases/aliases'
 alias notes='nvim ~/notes.txt'
 alias rust='evcxr'
 alias ctr='cargo test --release'
 alias vconfig='vim ~/.config/nvim'
+alias json='pbpaste | jq > ~/kod/slask.json && vim ~/kod/slask.json'
 
 
 findandkill() {  
